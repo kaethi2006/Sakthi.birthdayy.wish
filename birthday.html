@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff4e8a,#6a5cff);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    text-align:center;
+    color:white;
+    animation: fadeIn 2s ease;
+}
+
+h1{
+    font-size:55px;
+    margin-bottom:10px;
+    animation: glow 2s infinite alternate;
+}
+
+p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4e8a;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:#ffe6f0;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white,
+                    0 0 20px pink,
+                    0 0 30px hotpink;
+    }
+
+    to{
+        text-shadow:0 0 20px white,
+                    0 0 30px yellow,
+                    0 0 40px orange;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Balloons */
+
+.balloon{
+    position:absolute;
+    bottom:-150px;
+    width:80px;
+    animation: float 10s infinite;
+}
+
+.balloon:nth-child(1){
+    left:10%;
+    animation-duration:8s;
+}
+
+.balloon:nth-child(2){
+    left:30%;
+    animation-duration:12s;
+}
+
+.balloon:nth-child(3){
+    left:50%;
+    animation-duration:10s;
+}
+
+.balloon:nth-child(4){
+    left:70%;
+    animation-duration:9s;
+}
+
+.balloon:nth-child(5){
+    left:90%;
+    animation-duration:11s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    100%{
+        transform:translateY(-120vh);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468373.png" class="balloon">
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468373.png" class="balloon">
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468373.png" class="balloon">
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468373.png" class="balloon">
+<img src="https://cdn-icons-png.flaticon.com/512/3468/3468373.png" class="balloon">
+
+<div class="container">
+
+<h1> Happy Birthday Thangamey 🎉</h1>
+
+<p>
+Wishing you happiness, love, success, and endless smiles on your special day ❤️
+</p>
+
+<button onclick="showMessage()">
+Click for Surprise 🎁
+</button>
+
+</div>
+
+<script>
+
+function showMessage(){
+    alert("✨ May all your dreams come true! ✨");
+}
+
+</script>
+
+</body>
+</html>
